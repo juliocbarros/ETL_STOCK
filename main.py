@@ -6,7 +6,6 @@ from datetime import timedelta, date
 
 #cria as funcoes de carregaento de dados
 final_date = "2025-1-21"
-@st.cache_data
 def carrega_dados(empresas):
     texto_tickers = " ".join(empresas)
     dados_acao =  yf.Tickers(texto_tickers)
@@ -17,6 +16,7 @@ def carrega_dados(empresas):
 
 
 
-acoes = ["JPM", "COST", "DIS", "AMZN", "DE"]
+#acoes = ["JPM", "COST", "DIS", "AMZN", "DE"]
+acoes = ["JPM"]
 dados = carrega_dados(acoes)
 print(dados)
